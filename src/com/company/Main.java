@@ -27,10 +27,13 @@ public class Main {
         String[] words = new String[5];
         System.out.println("Enter 5 words : ");
         for (int i = 0; i < words.length; i++) {
-            words[i] = keyboard.next();
-            if (words[i].equalsIgnoreCase("history")){
+            String word = keyboard.next();
+
+            if(word.equalsIgnoreCase("history")){
                 print(words, i);
                 break;
+            } else{
+                words[i] = word;
             }
         }
         print(words, words.length);
@@ -39,10 +42,13 @@ public class Main {
         String[] presidents = new String[10];
         System.out.println("Type in the names of the last ten presidents in the order they were elected.");
         for (int i = 0; i < presidents.length; i++) {
-            presidents[i] = keyboard.next();
-            if (presidents[i].equalsIgnoreCase("history")){
+            String president = keyboard.next();
+
+            if (president.equalsIgnoreCase("history")){
                 print(presidents, i);
                 break;
+            } else{
+                presidents[i] = president;
             }
         }
         print(presidents, presidents.length);
